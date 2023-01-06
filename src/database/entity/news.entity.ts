@@ -3,7 +3,7 @@ import { Model } from 'sequelize';
 import { Column, DataType, Table } from 'sequelize-typescript';
 
 @Table({
-    tableName: 'News',
+    tableName: 'news',
     comment:'ตารางข่าว new'
 })
 export class NewsDB extends Model<NewsDB> {
@@ -16,20 +16,17 @@ export class NewsDB extends Model<NewsDB> {
     })
     id: number;
 
-    @ApiProperty()
     @Column({
         allowNull: false,
         comment: 'หัวข้อข่าว'
     })
     headlines: string;
 
-    @ApiProperty()
     @Column({
         allowNull: false,
     })
-    detials: string;
+    details: string;
 
-    @ApiProperty()
     @Column({
         allowNull: false,
     })

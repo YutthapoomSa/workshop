@@ -44,7 +44,7 @@ export const databaseProviders = [
         useFactory: async (configService: ConfigService) => {
             const sequelize = new Sequelize(configService.sequelizeOrmConfig);
             // tslint:disable-next-line:max-line-length
-            sequelize.addModels([UserDB, UserTokenDB, UserSocketDB, UserPasswordDB]);
+            sequelize.addModels([UserDB, UserTokenDB, UserSocketDB, UserPasswordDB, NewsDB]);
             await sequelize.sync({ alter: true });
             // await sequelize.sync({ force: true });
             return sequelize;
