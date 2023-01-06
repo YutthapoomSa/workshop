@@ -1,7 +1,6 @@
 import { HttpException, HttpStatus, Inject, Injectable, OnApplicationBootstrap } from '@nestjs/common';
 import { Sequelize } from 'sequelize-typescript';
 import { DataBase } from 'src/database/database.providers';
-import { UserDB } from 'src/database/entity/user.entity';
 import { LogService } from 'src/helper/services/log.service';
 import { NewsDB } from '../../database/entity/news.entity';
 
